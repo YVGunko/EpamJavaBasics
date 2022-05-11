@@ -19,16 +19,16 @@ public class Point {
         return Double.compare(point.x, x) == 0 && Double.compare(point.y, y) == 0;
     }
 
-    public Point(double x, double y) {
+    Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public double getX() {
+    double getX() {
         return x;
     }
 
-    public double getY() {
+    double getY() {
         return y;
     }
 }

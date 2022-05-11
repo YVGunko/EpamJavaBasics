@@ -2,10 +2,9 @@ package com.epam.learn.JavaBasicsRuClasses.DecrementingCarousel;
 
 public class DecrementingCarousel {
     private final int capacity;
-    int counter;
-    //static List <Integer> elements = new ArrayList<>();
+    private int counter;
     static int [] carousel ;
-    boolean isRun;
+    private boolean isRun;
 
     {
         counter = 0;
@@ -17,7 +16,7 @@ public class DecrementingCarousel {
         carousel = new int[capacity];
     }
 
-    public boolean addElement(int element){
+    boolean addElement(int element){
         if (!isRun && counter < capacity && element > 0) {
             carousel[counter] = element;
             counter++;
@@ -27,7 +26,7 @@ public class DecrementingCarousel {
         //throw new UnsupportedOperationException();
     }
 
-    public CarouselRun run(){
+    CarouselRun run(){
         if (!isRun) {
             isRun = true;
             return new CarouselRun();

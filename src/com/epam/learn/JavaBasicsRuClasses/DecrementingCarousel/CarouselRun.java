@@ -1,10 +1,10 @@
 package com.epam.learn.JavaBasicsRuClasses.DecrementingCarousel;
 
 public class CarouselRun {
-    protected final int[] array = DecrementingCarousel.carousel.clone();
-    protected int position = 0;
+    private final int[] array = DecrementingCarousel.carousel.clone();
+    private int position = 0;
 
-    public int next() {
+    int next() {
         if (isFinished())
             return -1;
         else {
@@ -15,7 +15,7 @@ public class CarouselRun {
         return array[position++]--;
     }
 
-    public boolean isFinished() {
+    boolean isFinished() {
         for (int el : array)
             if (el > 0)
                 return false;

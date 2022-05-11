@@ -22,7 +22,7 @@ public class Triangle {
         return c;
     }
 
-    boolean isExist(){
+    private boolean isExist(){
         double r = length(this.a, this.b);
         double s = length(this.a, this.c);
         double t = length(this.b, this.c);
@@ -52,12 +52,12 @@ public class Triangle {
         double y = (this.a.getY() + this.b.getY() + this.c.getY()) / 3;
         return new Point(x,y);
     }
-    double length(Point a, Point b) {
+    private double length(Point a, Point b) {
         double xDistanceSquare = Math.pow(a.getX() - b.getX(), 2);
         double yDistanceSquare = Math.pow(a.getY() - b.getY(), 2);
         return Math.sqrt(xDistanceSquare + yDistanceSquare);
     }
-    double[] sides(){
+    private double[] sides(){
         double[] result = new double[3];
         result[0] = length(this.a, this.b);
         result[1] = length(this.a, this.c);
